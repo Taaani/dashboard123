@@ -160,7 +160,7 @@ const SidebarContent = props => {
                 <span>{props.t("Calendar")}</span>
               </Link>
             </li>
-
+             {/* emails */}
             <li>
               <Link to="/#" className="has-arrow waves-effect">
                 <i className="ti-email"></i>
@@ -178,6 +178,27 @@ const SidebarContent = props => {
                 </li>
               </ul>
             </li>
+            {/* students-details */}
+            <li>
+              <Link to="/#" className="has-arrow waves-effect">
+                <i className="ti-email"></i>
+                <span>{props.t("Student")}</span>
+              </Link>
+              <ul className="sub-menu" aria-expanded="false">
+                <li>
+                  <Link to="/student/stu_attendence">{props.t("Attendence")}</Link>
+                </li>
+                <li>
+                  <Link to="/student/stu_registration">{props.t("New Student")}</Link>
+                </li>
+                <li>
+                  <Link to="/student/stu_profile">{props.t("Student profile")}</Link>
+                </li>
+               
+              </ul>
+            </li>
+            {/* supervisor  */}
+           
 
             <li className="menu-title">{props.t("Components")}</li>
 

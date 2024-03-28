@@ -2,6 +2,7 @@ import React from "react";
 
 // Profile
 import UserProfile from "../pages/Authentication/user-profile";
+import AttendenceLog from '../pages/AtendenceLog'
 
 // Pages Calendar
 import Calendar from "../pages/Calendar/index";
@@ -113,11 +114,24 @@ import PagesGallery from "../pages/Utility/PagesGallery";
 import PagesDirectory from "../pages/Utility/PagesDirectory";
 import PagesProfile from "pages/Utility/pages-profile";
 
+// student Routes.....
+import Stu_attendence from "pages/Student/stu_attendence";
+import Stu_profile from "pages/Student/stu_profile";
+
+// superident_routes....
+import Stu_Registration from "pages/Student/stu_Registration";
+
 const userRoutes = [
   { path: "/dashboard", component: <Dashboard /> },
 
   // //calendar
   { path: "/calendar", component: <Calendar /> },
+
+  // student Routes
+  { path: "/student/stu_attendence", component: <Stu_attendence /> },
+  { path: "/student/stu_registration", component: <Stu_Registration/> },
+  { path: "/student/stu_profile", component: <Stu_profile/> },
+
 
   // //profile
   { path: "/profile", component: <UserProfile /> },
@@ -216,6 +230,9 @@ const authRoutes = [
   { path: "/pages-404", component: <Pages404 /> },
   { path: "/pages-500", component: <Pages500 /> },
 
+  // superident...
+  
+
   // Authentication Inner
   { path: "/pages-login", component: <Login1 /> },
   { path: "/pages-login-2", component: <Login2 /> },
@@ -234,4 +251,9 @@ const authRoutes = [
   { path: "/auth-two-step-verification-2", component: <TwostepVerification2 /> },
 ];
 
-export { userRoutes, authRoutes };
+// const studentRoute = [
+//   { path: "/stu_attendence", component: <Stu_attendence /> },
+
+// ];
+
+export { userRoutes, authRoutes,};
